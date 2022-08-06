@@ -5,6 +5,7 @@
 - [Javascript](#javascript)
 - [Shoutouts (and Twitch channel information)](#shoutouts-and-twitch-channel-information)
 - [Counters](#counters)
+- [Consider supporting me](#consider-supporting-me)
 
 <br />
 <br />
@@ -24,11 +25,13 @@
 
 You can manage Nightbot from the [dashboard](https://nightbot.tv/dashboard) or through the [`!commands`](https://docs.nightbot.tv/commands/commands) command.
 
-My commands make _heavy_ use of [Nightbot Variables](https://docs.nightbot.tv/commands/variableslist).
+<br />
+
+My commands make _heavy_ use of [Nightbot Variables](https://docs.nightbot.tv/commands/variableslist). And most of them can **_NOT_** be easily managed from the dashboard.
 
 <br />
 
-> Unlike StreamElements, Nightbot doesn't care about what your command trigger is. You can use anything as a trigger. Like an emoji 😈, `aword`, or the usual `!prefixcommand`.
+> TIP: Unlike StreamElements, Nightbot doesn't care about what your command trigger is. You can use anything as a trigger. Like an emoji 😈, `aword`, or the usual `!prefixcommand`.
 
 <br />
 <br />
@@ -58,7 +61,7 @@ Nightbot offers you a wide range of ways to gether information from a channel. I
 <br />
 
 This is an example of your everyday shoutout command:  
-`!commands add !so /me Check out $(eval "$(touser)".toLowerCase().replace("@",""))! They were last playing "$(twitch $(touser) "{{game}} - {{title}}")"`
+`!commands add !so /me Check out $(eval "$(touser)".toLowerCase().replace("@",""))! They were last playing "$(twitch $(touser) "{{game}} - {{title}}")" TPFufun`
 <br />
 <br />
 And this is all the information you can extract from the `$(twitch)` command:
@@ -106,3 +109,14 @@ Now, we create the counter (_the command that will hold the math_), with a 10 se
 <br />
 
 The `-a` flag means the command will call another command (_inception_). Passing whatever text that comes afterwards as argument (in this case, `edit !koroks YAHAHAAAA! 🥬 We got $(count)/900 Koroks!`). Meaning Nightbot will act as it's own channel moderator and edit another command. And update the `!koroks` command to now display the text `YAHAHAAAA! 🥬 We got {number}/900 Koroks!`.
+
+<br />
+<br />
+
+# Consider supporting me
+
+- [Buy me a coffee](https://www.buymeacoffee.com/mazeakin)
+- [Follow me on Twitter](https://twitter.com/mazeakin)
+- [Follow me on Twitch](https://twitch.tv/mazeakin)
+- [Join my Discord](https://discord.gg/eYfSNQT)
+- [Get sub emotes on my old channel](https://twitch.tv/gataquadrada)
