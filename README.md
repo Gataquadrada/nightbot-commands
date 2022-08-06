@@ -6,6 +6,7 @@
 - [Shoutouts (and Twitch channel information)](#shoutouts-and-twitch-channel-information)
 - [Counters](#counters)
 - [Quotes](#quotes)
+- [Extra sources](#extra-sources)
 - [Consider supporting me](#consider-supporting-me)
 
 <br />
@@ -137,19 +138,35 @@ Now, we create the counter (_the command that will hold the math_), with a 10 se
 
 ([Back to top](#summary))
 
+> NOTE: In the future, I'll add a bonus section here for hosting your own quotes system. With source code.
+
+<br />
+
 Nightbot does **NOT** offer a quotes system. Meaning we have to use external services (or custom servers) for our quotes.
 
 I like to use [Twitch.Center](https://twitch.center/), when I'm creating quotes for a new streamer. And then export them into a personalized solution.
 <br />
 <br />
+<br />
+
+## Automatic installation
+
+Just visit [https://twitch.center/customapi/quote/nightbot](https://twitch.center/customapi/quote/nightbot) and follow the instructions.
+<br />
+<br />
+<br />
+
+## Manual installation
 
 First, we need to generate the token for your channel.  
 Visit the [https://twitch.center/customapi/quote/generate](https://twitch.center/customapi/quote/generate) URL and save all URLs the page gave you. They should have `/quote`, `/addquote` and `/delquote` as a part of them.
+
 <br />
 <br />
 
 > NOTE: No authentication is required. The service will just create random tokens. Meaning you'll lose your quotes, if you ever lose your token. But it also opens the way for interesting interactions. Like two channels having the same quotes pool.
 
+<br />
 <br />
 
 List of commands:
@@ -160,15 +177,34 @@ List of commands:
   `!commands add !addquote -ul=moderator $(urlfetch https://twitch.center/customapi/addquote?token=YOUR_TOKEN&data=$(querystring))`
 - Deleting a quote (and making it mod only):  
    `!commands add !delquote -ul=moderator $(urlfetch https://twitch.center/customapi/delquote?token=YOUR_TOKEN&data=$(querystring))`
-  <br />
-  <br />
+- Editing a quote (and making it mod only):  
+   `!commands add !editquote -ul=moderator $(urlfetch http://twitch.center/customapi/editquote?token=YOUR_TOKEN&data=$(querystring))`
 
-> NOTE: In the future, I'll add a bonus section here for hosting your own quotes system. With source code.
+<br />
+<br />
+
+Available modifiers:
+
+- You can add `&no_id=1` to the url to disable numbering on quotes.
+- You can delete ALL quotes by adding `&clear=1` to !delquote command.
+- You can silence non-error responses (“Quote added successfully”) with `&silent=1`.
+- Using `!quote list` will give you an URL with all your quotes. Easy when migrating to a new service.
+
+<br />
+<br />
+
+# Extra sources
+
+([Back to top](#summary))
+
+- Check Nightbot's Custom API forum [here](https://community.nightdev.com/c/nightbot/custom-apis/13). You'll find a lot of nice stuff people created.
 
 <br />
 <br />
 
 # Consider supporting me
+
+([Back to top](#summary))
 
 - [Buy me a coffee](https://www.buymeacoffee.com/mazeakin)
 - [Follow me on Twitter](https://twitter.com/mazeakin)
