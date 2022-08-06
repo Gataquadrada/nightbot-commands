@@ -1,12 +1,26 @@
-This is a list of commands I used or used though my ([short](#why)) streaming career.
+# Summary
+
+- [Basics of Nightbot](#basics-of-nightbot)
+- [Commands](#commands)
+- [Javascript](#javascript)
+- [Shoutouts (and Twitch channel information)](#shoutouts-and-twitch-channel-information)
+- [Counters](#counters)
+
+<br />
+<br />
 
 # Basics of Nightbot
 
+([Back to top](#summary))
+
 "_[Nightbot](http://nightbot.tv/) is a chat bot for Twitch, YouTube, and Trovo that allows you to automate your live stream's chat with moderation and new features, allowing you to spend more time entertaining your viewers._"
+
 <br />
 <br />
 
-## Commands
+# Commands
+
+([Back to top](#summary))
 
 You can manage Nightbot from the [dashboard](https://nightbot.tv/dashboard) or through the [`!commands`](https://docs.nightbot.tv/commands/commands) command.
 
@@ -19,16 +33,9 @@ My commands make _heavy_ use of [Nightbot Variables](https://docs.nightbot.tv/co
 <br />
 <br />
 
-# Summary
+# Javascript
 
-- [Javascript](#javascript)
-- [Shoutouts (and Twitch channel information)](#shoutouts)
-- [Counters](#counters)
-
-<br />
-<br />
-
-## Javascript
+([Back to top](#summary))
 
 Nightbot also offers a Javascript interpreter in the `$(eval)` command. Meaning whatever actual (reasonable and short) Javascript you use will actually be executed.
 <br />
@@ -42,7 +49,9 @@ $(eval 1+1) // 2
 <br />
 <br />
 
-## Shoutouts (and Twitch channel information)
+# Shoutouts (and Twitch channel information)
+
+([Back to top](#summary))
 
 Nightbot offers you a wide range of ways to gether information from a channel. It even has it's own Twitch API calls. All to help you offer a personalized experience.
 <br />
@@ -76,7 +85,9 @@ And this is all the information you can extract from the `$(twitch)` command:
 <br />
 <br />
 
-## Counters
+# Counters
+
+([Back to top](#summary))
 
 Nightbot does math based on the amount of times a command was used. You can't just create random counters (like StreamElements does).  
 In order to count something, you need a `mod-level` command and use that command as counter for a public command.
@@ -95,10 +106,3 @@ Now, we create the counter (_the command that will hold the math_), with a 10 se
 <br />
 
 The `-a` flag means the command will call another command (_inception_). Passing whatever text that comes afterwards as argument (in this case, `edit !koroks YAHAHAAAA! 🥬 We got $(count)/900 Koroks!`). Meaning Nightbot will act as it's own channel moderator and edit another command. And update the `!koroks` command to now display the text `YAHAHAAAA! 🥬 We got {number}/900 Koroks!`.
-
-<br />
-<br />
-
-# Why
-
-> _Despite my channel growth and moderate success (affiliated within a week and 30 viewers average in first month), I came to realize I like creating tools from backstage more than being in the spotlight._
