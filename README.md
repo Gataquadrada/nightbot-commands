@@ -76,7 +76,6 @@ And this is all the information you can extract from the `$(twitch)` command:
 |{{name}}|username|
 |{{resolution}}|stream resolution (if live)|
 |{{status}}|offline, live, or playing a playlist|
-|{{subscriberCount}}|the number of subscribers a channel has (only available when querying from the desired channel)|
 |{{tags}}|stream tags|
 |{{title}}|stream title|
 |{{uptimeAt}}|date/time user went live (or started playing a playlist)|
@@ -84,6 +83,10 @@ And this is all the information you can extract from the `$(twitch)` command:
 |{{url}}|channel page link|
 |{{views}}|current number of channel views|
 |{{viewers}}|current number of live viewers|
+
+<br />
+
+> NOTE: I removed unstable variables (like subscriber count, as it doesn't apply to unaffiliated channels). Check the full list [here](https://docs.nightbot.tv/commands/variableslist).
 
 <br />
 <br />
@@ -108,7 +111,9 @@ Now, we create the counter (_the command that will hold the math_), with a 10 se
 <br />
 <br />
 
-The `-a` flag means the command will call another command (_inception_). Passing whatever text that comes afterwards as argument (in this case, `edit !koroks YAHAHAAAA! 🥬 We got $(count)/900 Koroks!`). Meaning Nightbot will act as it's own channel moderator and edit another command. And update the `!koroks` command to now display the text `YAHAHAAAA! 🥬 We got {number}/900 Koroks!`.
+> The `-a` flag means the command will call another command (_inception_). Passing whatever text that comes afterwards as argument (in this case, `edit !koroks YAHAHAAAA! 🥬 We got $(count)/900 Koroks!`).
+>
+> Meaning Nightbot will act as it's own channel moderator and edit another command. In this example, it will update the `!koroks` command to now display the text `YAHAHAAAA! 🥬 We got {number}/900 Koroks!`.
 
 <br />
 <br />
