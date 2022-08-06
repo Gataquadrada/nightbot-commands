@@ -31,12 +31,10 @@ My commands make _heavy_ use of [Nightbot Variables](https://docs.nightbot.tv/co
 Nightbot does math based on the amount of times a command was used. You can't just create random counters (like StreamElements does).  
 In order to count something, you need a `mod-level` command and use that command as counter for a public command.
 
-<br />
 Before creating a counter, you need to create a public command (as in, the command viewers will use to track your counter).  
 This command's output will be replaced by it's counter's output. Think about it as the message that appears while the counter is 0 (zero).  
 `!commands add !koroks YA HA NO! We didn't find any Koroks... yet!`
 
-<br />
 Creating the counter (the command that will hold the math), with a 10 seconds cooldown:  
 `!commands add !korok -ul=moderator -cd=10 -a=!commands edit !koroks YAHAHAAAA! 🥬 We got $(count)/900 Koroks!`
 
