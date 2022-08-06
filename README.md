@@ -197,7 +197,7 @@ Available modifiers:
 
 ([Back to top](#summary))
 
-- Check Nightbot's Custom API forum [here](https://community.nightdev.com/c/nightbot/custom-apis/13). You'll find a lot of nice stuff people created.
+- Check Nightbot's Custom API forum [here](https://community.nightdev.com/c/nightbot/custom-apis/). You'll find a lot of nice stuff people created.
 
 <br />
 <br />
