@@ -5,6 +5,7 @@
 - [Javascript](#javascript)
 - [Shoutouts (and Twitch channel information)](#shoutouts-and-twitch-channel-information)
 - [Counters](#counters)
+- [Quotes](#quotes)
 - [Consider supporting me](#consider-supporting-me)
 
 <br />
@@ -48,6 +49,11 @@ Like:
 ```javascript
 $(eval 1+1) // 2
 ```
+
+<br />
+
+Here's a simple coin toss example:  
+`!commannds add !coin $(user) tossed a coin and got $(eval const r = ['heads 🎃', 'tails 🐈']; r[Math.floor(Math.random() * r.length)])`
 
 <br />
 <br />
@@ -96,11 +102,20 @@ And this is all the information you can extract from the `$(twitch)` command:
 ([Back to top](#summary))
 
 Nightbot does math based on the amount of times a command was used. You can't just create random counters (like StreamElements does).  
-In order to count something, you need a `mod-level` command and use that command as counter for a public command.
+In order to count something more specific, you need a `mod-level` command and use that command as counter for a public command.
 <br />
 <br />
 
-Before creating a counter, you need to create a public command (as in, the command viewers will use to track your counter).  
+For a simple counter command, you can just print it's own counter. Like this:  
+`!commands add f /me $(user) has paid respects ($(count) respects given)`
+<br />
+<br />
+<br />
+
+If you seek something more advanced (like tracking your progress into a task), you'll need to combine two commands (and some variables).
+<br />
+
+Before creating an advanced counter, you need to create a public command (as in, the command viewers will use to track your counter).  
 This command's output will be replaced by it's counter's output. Think about it as the message that appears while the counter is 0 (zero).  
 `!commands add !koroks YA HA NO! We didn't find any Koroks... yet!`
 <br />
@@ -114,6 +129,41 @@ Now, we create the counter (_the command that will hold the math_), with a 10 se
 > The `-a` flag means the command will call another command (_inception_). Passing whatever text that comes afterwards as argument (in this case, `edit !koroks YAHAHAAAA! 🥬 We got $(count)/900 Koroks!`).
 >
 > Meaning Nightbot will act as it's own channel moderator and edit another command. In this example, it will update the `!koroks` command to now display the text `YAHAHAAAA! 🥬 We got {number}/900 Koroks!`.
+
+<br />
+<br />
+
+# Quotes
+
+([Back to top](#summary))
+
+Nightbot does **NOT** offer a quotes system. Meaning we have to use external services (or custom servers) for our quotes.
+
+I like to use [Twitch.Center](https://twitch.center/), when I'm creating quotes for a new streamer. And then export them into a personalized solution.
+<br />
+<br />
+
+First, we need to generate the token for your channel.  
+Visit the [https://twitch.center/customapi/quote/generate](https://twitch.center/customapi/quote/generate) URL and save all URLs the page gave you. They should have `/quote`, `/addquote` and `/delquote` as a part of them.
+<br />
+<br />
+
+> NOTE: No authentication is required. The service will just create random tokens. Meaning you'll lose your quotes, if you ever lose your token. But it also opens the way for interesting interactions. Like two channels having the same quotes pool.
+
+<br />
+
+List of commands:
+
+- Getting a random quote  
+  `!commands add !quote $(urlfetch https://twitch.center/customapi/quote?token=YOUR_TOKEN)`
+- Adding a quote (and making it mod only):  
+  `!commands add !addquote -ul=moderator $(urlfetch https://twitch.center/customapi/addquote?token=YOUR_TOKEN&data=$(querystring))`
+- Deleting a quote (and making it mod only):  
+   `!commands add !delquote -ul=moderator $(urlfetch https://twitch.center/customapi/delquote?token=YOUR_TOKEN&data=$(querystring))`
+  <br />
+  <br />
+
+> NOTE: In the future, I'll add a bonus section here for hosting your own quotes system. With source code.
 
 <br />
 <br />
