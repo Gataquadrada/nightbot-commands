@@ -1,13 +1,14 @@
 # Summary
 
-- [Basics of Nightbot](#basics-of-nightbot)
-- [Commands](#commands)
-- [Javascript](#javascript)
-- [Shoutouts (and Twitch channel information)](#shoutouts-and-twitch-channel-information)
-- [Counters](#counters)
-- [Quotes](#quotes)
-- [Extra sources](#extra-sources)
-- [Consider supporting me](#consider-supporting-me)
+-   [Basics of Nightbot](#basics-of-nightbot)
+-   [Commands](#commands)
+-   [Javascript](#javascript)
+-   [Wikipedia search](#wikipedia-search)
+-   [Shoutouts (and Twitch channel information)](#shoutouts-and-twitch-channel-information)
+-   [Counters](#counters)
+-   [Quotes](#quotes)
+-   [Extra sources](#extra-sources)
+-   [Consider supporting me](#consider-supporting-me)
 
 <br />
 <br />
@@ -53,8 +54,16 @@ $(eval 1+1) // 2
 
 <br />
 
-Here's a simple coin toss example:  
+### Coin toss example
+
 `!commannds add !coin $(user) tossed a coin and got $(eval const r = ['heads 🎃', 'tails 🐈']; r[Math.floor(Math.random() * r.length)])`
+
+<br />
+<br />
+
+### Wikipedia article
+
+`` !commannds add !wiki Wikipedia Article: $(eval const api = $(urlfetch json https://en.wikipedia.org/w/api.php?format=json&action=opensearch&search=$(querystring)); api.error || ! api[1][0] ? 'Please add a query to the search' : `${api[1][0]} - ${api[3][0]}`) ``
 
 <br />
 <br />
@@ -171,24 +180,24 @@ Visit the [https://twitch.center/customapi/quote/generate](https://twitch.center
 
 List of commands:
 
-- Getting a random quote  
-  `!commands add !quote $(urlfetch https://twitch.center/customapi/quote?token=YOUR_TOKEN)`
-- Adding a quote (and making it mod only):  
-  `!commands add !addquote -ul=moderator $(urlfetch https://twitch.center/customapi/addquote?token=YOUR_TOKEN&data=$(querystring))`
-- Deleting a quote (and making it mod only):  
-   `!commands add !delquote -ul=moderator $(urlfetch https://twitch.center/customapi/delquote?token=YOUR_TOKEN&data=$(querystring))`
-- Editing a quote (and making it mod only):  
-   `!commands add !editquote -ul=moderator $(urlfetch http://twitch.center/customapi/editquote?token=YOUR_TOKEN&data=$(querystring))`
+-   Getting a random quote  
+    `!commands add !quote $(urlfetch https://twitch.center/customapi/quote?token=YOUR_TOKEN)`
+-   Adding a quote (and making it mod only):  
+    `!commands add !addquote -ul=moderator $(urlfetch https://twitch.center/customapi/addquote?token=YOUR_TOKEN&data=$(querystring))`
+-   Deleting a quote (and making it mod only):  
+     `!commands add !delquote -ul=moderator $(urlfetch https://twitch.center/customapi/delquote?token=YOUR_TOKEN&data=$(querystring))`
+-   Editing a quote (and making it mod only):  
+     `!commands add !editquote -ul=moderator $(urlfetch http://twitch.center/customapi/editquote?token=YOUR_TOKEN&data=$(querystring))`
 
 <br />
 <br />
 
 Available modifiers:
 
-- You can add `&no_id=1` to the url to disable numbering on quotes.
-- You can delete ALL quotes by adding `&clear=1` to !delquote command.
-- You can silence non-error responses (“Quote added successfully”) with `&silent=1`.
-- Using `!quote list` will give you an URL with all your quotes. Easy when migrating to a new service.
+-   You can add `&no_id=1` to the url to disable numbering on quotes.
+-   You can delete ALL quotes by adding `&clear=1` to !delquote command.
+-   You can silence non-error responses (“Quote added successfully”) with `&silent=1`.
+-   Using `!quote list` will give you an URL with all your quotes. Easy when migrating to a new service.
 
 <br />
 <br />
@@ -197,7 +206,7 @@ Available modifiers:
 
 ([Back to top](#summary))
 
-- Check Nightbot's Custom API forum [here](https://community.nightdev.com/c/nightbot/custom-apis/). You'll find a lot of nice stuff people created.
+-   Check Nightbot's Custom API forum [here](https://community.nightdev.com/c/nightbot/custom-apis/). You'll find a lot of nice stuff people created.
 
 <br />
 <br />
@@ -206,8 +215,8 @@ Available modifiers:
 
 ([Back to top](#summary))
 
-- [Buy me a coffee](https://www.buymeacoffee.com/mazeakin)
-- [Follow me on Twitter](https://twitter.com/mazeakin)
-- [Follow me on Twitch](https://twitch.tv/mazeakin)
-- [Join my Discord](https://discord.gg/eYfSNQT)
-- [Get sub emotes on my old channel](https://twitch.tv/gataquadrada)
+-   [Buy me a coffee](https://www.buymeacoffee.com/mazeakin)
+-   [Follow me on Twitter](https://twitter.com/mazeakin)
+-   [Follow me on Twitch](https://twitch.tv/mazeakin)
+-   [Join my Discord](https://discord.gg/eYfSNQT)
+-   [Get sub emotes on my old channel](https://twitch.tv/gataquadrada)
