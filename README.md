@@ -3,7 +3,7 @@
 -   [Basics of Nightbot](#basics-of-nightbot)
 -   [Commands](#commands)
 -   [Javascript](#javascript)
--   [Wikipedia search](#wikipedia-search)
+-   [Wikipedia article](#wikipedia-article)
 -   [Shoutouts (and Twitch channel information)](#shoutouts-and-twitch-channel-information)
 -   [Counters](#counters)
 -   [Quotes](#quotes)
