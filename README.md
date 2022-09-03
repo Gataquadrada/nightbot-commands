@@ -8,7 +8,8 @@
 -   [Counters](#counters)
 -   [Quotes](#quotes)
 -   [Misc commands](#misc-commands)
-    -   [Quick speedrun.com search](#quick-speedruncom-search)
+    -   [Quick Speedrun.com search](#quick-speedruncom-search)
+    -   [Speedrun.com profile](#speedruncom-profile)
 -   [Extra sources](#extra-sources)
 -   [Consider supporting me](#consider-supporting-me)
 
