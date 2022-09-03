@@ -7,6 +7,8 @@
 -   [Shoutouts (and Twitch channel information)](#shoutouts-and-twitch-channel-information)
 -   [Counters](#counters)
 -   [Quotes](#quotes)
+-   [Misc commands](#misc-commands)
+    -   [Quick speedrun.com search](#quick-speedruncom-search)
 -   [Extra sources](#extra-sources)
 -   [Consider supporting me](#consider-supporting-me)
 
@@ -202,6 +204,37 @@ Available modifiers:
 <br />
 <br />
 
+# Misc commands
+
+([Back to top](#summary))
+
+<br />
+
+## Quick Speedrun.com search
+
+Grabs your game on Twitch and searches for it's boards on Speedrun.com.
+
+![1.png](img/1.png)
+
+```
+$(eval const api = $(urlfetch json https://www.speedrun.com/ajax_search.php?term=$(twitch $(channel) "{{game}}")); api.error || !api[0].url ? '$(touser) Game not found or channel offline' : `$(touser) WR: http://speedrun.com/${api[0].url}`)
+```
+
+<br />
+
+## Speedrun.com profile
+
+Grabs your name on Twitch and creates a URL to your Speedrun.com profile.
+
+![2.png](img/2.png)
+
+```
+https://www.speedrun.com/user/$(channel)/
+```
+
+<br />
+<br />
+
 # Extra sources
 
 ([Back to top](#summary))
@@ -220,3 +253,7 @@ Available modifiers:
 -   [Follow me on Twitch](https://twitch.tv/mazeakin)
 -   [Join my Discord](https://discord.gg/eYfSNQT)
 -   [Get sub emotes on my old channel](https://twitch.tv/gataquadrada)
+
+```
+
+```
