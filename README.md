@@ -254,7 +254,3 @@ https://www.speedrun.com/user/$(channel)/
 -   [Follow me on Twitch](https://twitch.tv/mazeakin)
 -   [Join my Discord](https://discord.gg/eYfSNQT)
 -   [Get sub emotes on my old channel](https://twitch.tv/gataquadrada)
-
-```
-
-```
