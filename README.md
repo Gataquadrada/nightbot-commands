@@ -249,8 +249,8 @@ https://www.speedrun.com/user/$(channel)/
 
 ([Back to top](#summary))
 
--   [Buy me a coffee](https://www.buymeacoffee.com/mazeakin)
--   [Follow me on Twitter](https://twitter.com/mazeakin)
--   [Follow me on Twitch](https://twitch.tv/mazeakin)
+-   [Buy me a coffee](https://www.buymeacoffee.com/gataquadrada)
+-   [Follow me on Twitter](https://twitter.com/gataquadrada)
+-   [Follow me on Twitch](https://twitch.tv/gataquadrada)
 -   [Join my Discord](https://discord.gg/eYfSNQT)
 -   [Get sub emotes on my old channel](https://twitch.tv/gataquadrada)
